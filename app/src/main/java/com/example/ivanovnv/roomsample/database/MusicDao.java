@@ -25,7 +25,7 @@ public interface MusicDao {
     void setLinksAlbumSongs(List<AlbumSong> linksAlbumSongs);
 
     @Query("select * from album")
-    List<Album> getAlboms();
+    List<Album> getAlbums();
 
     @Query("select * from song")
     List<Song> getSongs();
@@ -33,6 +33,6 @@ public interface MusicDao {
     @Delete
     void deleteAlbum (Album album);
 
-    @Query("select * from song innet join albumsong on song.id = albumsong.song_id where album_id = :albumid")
+    @Query("select * from song inner join albumsong on song.id = albumsong.song_id where album_id = :albumId")
     List<Song> getSongsFromAlbum(int albumId);
 }

@@ -52,4 +52,12 @@ public class Album {
     public void setReleaseDate(String mReleaseDate) {
         this.mReleaseDate = mReleaseDate;
     }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "mId=" + mId +
+                ", mName='" + mName +
+                ", mReleaseDate='" + mReleaseDate + '}';
+    }
 }
